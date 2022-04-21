@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "a6f7663a-39e3-4403-8d9b-c9fd7007379f",
+		"name": "posts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "[測試] 擷取路由",
+			"request": {
+				"method": "OPTIONS",
+				"header": [],
+				"url": {
+					"raw": "https://dry-retreat-30422.herokuapp.com/",
+					"protocol": "https",
+					"host": [
+						"dry-retreat-30422",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "取得 所有貼文清單",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dry-retreat-30422.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"dry-retreat-30422",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除 所有貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://dry-retreat-30422.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"dry-retreat-30422",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增 貼文",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"DAT\",\n    \"tags\": [\"test\"],\n    \"type\": \"person\",\n    \"content\": \"測試發文\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dry-retreat-30422.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"dry-retreat-30422",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "刪除 單筆貼文",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://dry-retreat-30422.herokuapp.com/posts/6261b89627254951d7e7721b",
+					"protocol": "https",
+					"host": [
+						"dry-retreat-30422",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"6261b89627254951d7e7721b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "編輯 單筆貼文",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\": \"editPost\",\n    \"tags\": [\"edit\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dry-retreat-30422.herokuapp.com/posts/6261b3ba90454cac932c2f75",
+					"protocol": "https",
+					"host": [
+						"dry-retreat-30422",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"6261b3ba90454cac932c2f75"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
