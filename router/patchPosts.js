@@ -12,6 +12,9 @@ function patchPosts(req, res) {
             const id = req.url.split('/').pop();
             const post = JSON.parse(body);
             // console.log(post);
+            if(!post.content) {
+                return errorHandle(res, 'content不能為空白');
+            }
             const posts = await Posts.findByIdAndUpdate(id, post);
             successHandle(res, posts);
         }

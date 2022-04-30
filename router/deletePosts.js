@@ -12,6 +12,9 @@ async function deletPosts(req, res) {
         }
         else{ // 刪除單筆
             const posts = await Posts.findByIdAndDelete(id);
+            if(!posts) {
+                return errorHandle(res, 'id不存在');
+            }
             successHandle(res, posts);
         }
     }
